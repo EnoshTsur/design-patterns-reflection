@@ -7,6 +7,14 @@ public class AdminFacade implements ClientFacade {
 
     private String adminName = "Jacob";
 
+    public AdminFacade(){
+        System.out.println("Default ctr!");
+    }
+
+    public AdminFacade(String adminName) {
+        this.adminName = adminName;
+    }
+
     @Override
     public AdminFacade login(String email, String password) {
         return !(email.equals("admin") && password.equals("123")) ? null :
